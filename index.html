@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Informações para o Evento</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 FORMULÁRIO DE INFORMAÇÕES PARA O EVENTO</h1>
+        <p>Preencha os campos abaixo com as informações necessárias para o planejamento Técnico do evento:</p>
+        <hr>
+
+        <form id="feedbackForm">
+            <!-- 1. RECURSOS HUMANOS -->
+            <div class="section">
+                <h2><i class="fas fa-users icon-blue"></i> 1. RECURSOS HUMANOS</h2>
+                <div class="form-group">
+                    <label for="techniciansNeeded">⦁ Número de técnicos necessários:</label>
+                    <input type="number" id="techniciansNeeded" name="techniciansNeeded" min="0" required>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 2. ACESSOS E VALIDAÇÕES -->
+            <div class="section">
+                <h2><i class="fas fa-door-open icon-green"></i> 2. ACESSOS E VALIDAÇÕES</h2>
+                <div class="form-group">
+                    <label for="accessGates">⦁ Quantidade de portões de acesso:</label>
+                    <input type="number" id="accessGates" name="accessGates" min="0" required>
+                    <small>Exemplo: 3 portões no total (1 Pista, 1 VIP e 1 Camarote)</small>
+                </div>
+                <div class="form-group">
+                    <label for="totalValidations">⦁ Número total de validações:</label>
+                    <input type="number" id="totalValidations" name="totalValidations" min="0" required>
+                    <small>Exemplo: Pista, VIP e Camarote com 10 validações no total</small>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 3. BILHETERIAS E GUICHÊS -->
+            <div class="section">
+                <h2><i class="fas fa-ticket-alt icon-purple"></i> 3. BILHETERIAS E GUICHÊS</h2>
+                <div class="form-group">
+                    <label for="boxOfficeCount">⦁ Quantidade de bilheterias:</label>
+                    <input type="number" id="boxOfficeCount" name="boxOfficeCount" min="0" required>
+                    <small>Exemplo: 1 bilheteria com 6 guichês de venda</small>
+                </div>
+                <div class="form-group">
+                    <label for="totalCounters">⦁ Número total de guichês de venda:</label>
+                    <input type="number" id="totalCounters" name="totalCounters" min="0" required>
+                    <small>Exemplo: 6 guichês de venda</small>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 4. HORÁRIOS DE FUNCIONAMENTO -->
+            <div class="section">
+                <h2><i class="fas fa-clock icon-orange"></i> 4. HORÁRIOS DE FUNCIONAMENTO</h2>
+                <div class="form-group">
+                    <label for="boxOfficeOpeningTime">⦁ Abertura da Bilheteria:</label>
+                    <input type="time" id="boxOfficeOpeningTime" name="boxOfficeOpeningTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="gateOpeningTime">⦁ Abertura da Portaria:</label>
+                    <input type="time" id="gateOpeningTime" name="gateOpeningTime" required>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 5. OUTRAS NECESSIDADES -->
+            <div class="section">
+                <h2><i class="fas fa-wifi icon-red"></i> 5. OUTRAS NECESSIDADES</h2>
+                <div class="form-group">
+                    <label for="wifiProvided">⦁ A Produção do Evento deverá disponibilizar Wi-fi para bilheteria e portaria!</label>
+                    <select id="wifiProvided" name="wifiProvided" required>
+                        <option value="Atenção!">Atenção!</option>
+                        <option value="Não">Não</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="button" id="generatePdf">Gerar PDF</button>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.24/jspdf.plugin.autotable.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
