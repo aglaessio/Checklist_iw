@@ -1,23 +1,19 @@
-Formulário de Informações para o Evento
-Este projeto consiste em um formulário web para coleta de informações necessárias para o planejamento técnico de eventos. O formulário permite que o usuário preencha dados como recursos humanos, acessos, bilheterias, horários de funcionamento e outras necessidades. Após o preenchimento, é possível gerar um PDF com as informações fornecidas.
+Manual de Utilização do Formulário de Informações para o Evento
+Este manual tem como objetivo guiar o usuário no preenchimento e utilização do Formulário de Informações para o Evento, que permite coletar dados essenciais para o planejamento técnico de eventos. O formulário é uma ferramenta web que, após o preenchimento, gera um PDF com as informações fornecidas.
 
-Tecnologias Utilizadas
-HTML: Estrutura do formulário.
+1. Introdução
+O formulário foi desenvolvido para facilitar a coleta de informações técnicas necessárias para a organização de eventos. Ele é dividido em seções que abrangem recursos humanos, acessos, bilheterias, horários de funcionamento e outras necessidades. Após o preenchimento, o usuário pode gerar um PDF com os dados fornecidos.
 
-CSS: Estilização do formulário e layout responsivo.
+2. Como Acessar o Formulário
+Pré-requisitos:
 
-JavaScript: Lógica para gerar o PDF a partir dos dados do formulário.
-
-jsPDF: Biblioteca JavaScript para gerar arquivos PDF.
-
-Como Usar
-Pré-requisitos
 Navegador web moderno (Google Chrome, Firefox, Edge, etc.).
 
 Conexão com a internet (para carregar as bibliotecas externas).
 
-Instalação
-Clone o repositório ou faça o download dos arquivos do projeto.
+Instalação:
+
+Clone o repositório ou faça o download dos arquivos do projeto:
 
 bash
 Copy
@@ -29,29 +25,70 @@ Copy
 cd formulario-evento
 Abra o arquivo index.html no seu navegador.
 
-Como Funciona
-Preencha o Formulário:
+3. Estrutura do Formulário
+O formulário é dividido em cinco seções principais:
 
-Abra o arquivo index.html no navegador.
+Recursos Humanos:
 
-Preencha todos os campos do formulário com as informações necessárias.
+Número de técnicos necessários: Informe a quantidade de técnicos que serão necessários para o evento.
 
-Gerar PDF:
+Acessos e Validações:
 
-Após preencher o formulário, clique no botão "Gerar PDF".
+Quantidade de portões de acesso: Informe o número de portões que estarão disponíveis para o evento.
 
-Um arquivo PDF será gerado com todas as informações fornecidas.
+Número total de validações: Informe o número total de validações que serão realizadas nos portões.
 
-Estrutura do Projeto
-index.html: Contém a estrutura HTML do formulário.
+Bilheterias e Guichês:
 
-styles.css: Contém os estilos CSS para o formulário.
+Quantidade de bilheterias: Informe o número de bilheterias que estarão disponíveis.
 
-scripts.js: Contém a lógica JavaScript para gerar o PDF.
+Número total de guichês de venda: Informe o número total de guichês de venda que estarão disponíveis.
 
-README.md: Este arquivo, com instruções sobre o projeto.
+Horários de Funcionamento:
 
-Exemplo de Saída do PDF
+Abertura da Bilheteria: Informe o horário de abertura da bilheteria.
+
+Abertura da Portaria: Informe o horário de abertura dos portões.
+
+Outras Necessidades:
+
+Wi-fi para bilheteria e portaria: Informe se a produção do evento deve disponibilizar Wi-fi para a bilheteria e portaria.
+
+4. Como Preencher o Formulário
+Recursos Humanos:
+
+No campo "Número de técnicos necessários", insira a quantidade de técnicos que serão necessários para o evento.
+
+Acessos e Validações:
+
+No campo "Quantidade de portões de acesso", insira o número de portões que estarão disponíveis.
+
+No campo "Número total de validações", insira o número total de validações que serão realizadas.
+
+Bilheterias e Guichês:
+
+No campo "Quantidade de bilheterias", insira o número de bilheterias que estarão disponíveis.
+
+No campo "Número total de guichês de venda", insira o número total de guichês de venda.
+
+Horários de Funcionamento:
+
+No campo "Abertura da Bilheteria", insira o horário de abertura da bilheteria.
+
+No campo "Abertura da Portaria", insira o horário de abertura dos portões.
+
+Outras Necessidades:
+
+No campo "A Produção do Evento deverá disponibilizar Wi-fi para bilheteria e portaria!", selecione "Sim" ou "Não" de acordo com a necessidade.
+
+5. Como Gerar o PDF
+Após preencher todos os campos do formulário, clique no botão "Gerar PDF" localizado no final do formulário.
+
+Um arquivo PDF será gerado automaticamente com todas as informações fornecidas.
+
+O PDF será salvo com o nome "formulario_evento.pdf" no seu computador.
+
+6. Exemplo de Saída do PDF
 O PDF gerado terá o seguinte formato:
 
 Copy
@@ -76,22 +113,27 @@ Abertura da Portaria: 12:00
 A organização do Evento deverá disponibilizar Wi-fi para bilheteria e portaria!: Sim
 
 Gerado em: 25/10/2023 14:30
-Personalização
-Alterar Estilos: Edite o arquivo styles.css para personalizar o design do formulário.
+7. Personalização
+Alterar Estilos: Para personalizar o design do formulário, edite o arquivo styles.css.
 
-Adicionar Campos: Adicione novos campos ao formulário no arquivo index.html e atualize o scripts.js para incluí-los no PDF.
+Adicionar Campos: Para adicionar novos campos ao formulário, edite o arquivo index.html e atualize o scripts.js para incluí-los no PDF.
 
 Alterar Fonte do PDF: No arquivo scripts.js, você pode alterar a fonte usada no PDF modificando a linha doc.setFont("Times", "normal"); para outra fonte suportada pelo jsPDF.
 
-Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias ou correções.
+8. Dicas e Boas Práticas
+Certifique-se de preencher todos os campos obrigatórios (marcados com *).
 
-Licença
+Verifique as informações antes de gerar o PDF para garantir que estão corretas.
+
+Caso precise de mais espaço para informações adicionais, considere adicionar campos de texto livre no formulário.
+
+9. Suporte e Contribuição
+Problemas ou Dúvidas: Caso encontre algum problema ou tenha dúvidas, abra uma issue no repositório do projeto.
+
+Contribuições: Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests com melhorias ou correções.
+
+10. Licença
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
-Como Executar o Projeto
-Abra o arquivo index.html no seu navegador.
-
-Preencha o formulário.
-
-Clique em "Gerar PDF" para baixar o arquivo com as informações.
+11. Conclusão
+O Formulário de Informações para o Evento é uma ferramenta simples e eficaz para coletar e organizar informações técnicas essenciais para o planejamento de eventos. Com este manual, esperamos que você consiga utilizar o formulário de forma eficiente e gerar PDFs com todas as informações necessárias para o sucesso do seu evento.
